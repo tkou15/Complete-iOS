@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A566A6092B981A4700450AC5 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A566A6082B981A4700450AC5 /* NotificationService.swift */; };
 		A7A54B512B8E592E006EFA56 /* Complete-iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A54B502B8E592E006EFA56 /* Complete-iOSApp.swift */; };
 		A7A54B532B8E592E006EFA56 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A54B522B8E592E006EFA56 /* ContentView.swift */; };
 		A7A54B552B8E592E006EFA56 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A54B542B8E592E006EFA56 /* Item.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A566A6082B981A4700450AC5 /* NotificationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		A7A54B4D2B8E592E006EFA56 /* Complete-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Complete-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7A54B502B8E592E006EFA56 /* Complete-iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Complete-iOSApp.swift"; sourceTree = "<group>"; };
 		A7A54B522B8E592E006EFA56 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 		A7A54B4F2B8E592E006EFA56 /* Complete-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				A566A6082B981A4700450AC5 /* NotificationService.swift */,
 				A7A54B502B8E592E006EFA56 /* Complete-iOSApp.swift */,
 				A7A54B522B8E592E006EFA56 /* ContentView.swift */,
 				A7A54B542B8E592E006EFA56 /* Item.swift */,
@@ -262,6 +265,7 @@
 			files = (
 				A7A54B532B8E592E006EFA56 /* ContentView.swift in Sources */,
 				A7A54B552B8E592E006EFA56 /* Item.swift in Sources */,
+				A566A6092B981A4700450AC5 /* NotificationService.swift in Sources */,
 				A7A54B512B8E592E006EFA56 /* Complete-iOSApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
