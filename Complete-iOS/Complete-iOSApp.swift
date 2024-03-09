@@ -10,6 +10,7 @@ import SwiftData
 
 @main
 struct Main: App {
+    
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
     var sharedModelContainer: ModelContainer = {
