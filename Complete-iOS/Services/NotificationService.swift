@@ -8,38 +8,39 @@
 import Foundation
 import UserNotifications
 
-final class NotificationManager: NSObject {
-    static let shared = NotificationManager()
-    
-    override init() {
-        super.init()
-    }
-    
+final class NotificationService: NSObject {
+    static let shared = NotificationService()
+        
     func requestAuth() {
         let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
         UNUserNotificationCenter.current().requestAuthorization(options: authOptions) { authorized, error in
-            if let error = error {
-                debugPrint(error.localizedDescription)
+            if authorized {
+                logger.permission.info("Push notifications allowed.")
             } else {
-                // TODO: Handle authorized.
+                logger.permission.warning("Push notifications not allowed.")
+            }
+            if let error = error {
+                logger.permission.error("")
+            } else {
+                
             }
         }
     }
 }
 
 // -- MARK: UNUserNotificationCenterDelegate
-extension NotificationManager: UNUserNotificationCenterDelegate {
+extension NotificationService: UNUserNotificationCenterDelegate {
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         // リモート通知かローカル通知かを判別
         if notification.request.trigger is UNPushNotificationTrigger {
-            print("willPresent Push Notification")
+            logger.default.debug("willPresent Push Notification")
         } else {
-            print("willPresent Local Notification")
+            logger.default.debug("willPresent Local Notification")
         }
 
         // 通知の ID を取得
-        print("notification.request.identifier: \(notification.request.identifier)")
+        logger.default.info("notification.request.identifier: \(notification.request.identifier)")
         
         completionHandler([.alert, .badge, .sound])
     }
@@ -50,13 +51,13 @@ extension NotificationManager: UNUserNotificationCenterDelegate {
 
         // リモート通知かローカル通知かを判別
         if notification.request.trigger is UNPushNotificationTrigger {
-            print("didReceive Push Notification")
+            logger.default.debug("didReceive Push Notification")
         } else {
-            print("didReceive Local Notification")
+            logger.default.debug("didReceive Local Notification")
         }
 
         // 通知の ID を取得
-        print("notification.request.identifier: \(notification.request.identifier)")
+        logger.default.debug("notification.request.identifier: \(notification.request.identifier)")
         
         completionHandler()
     }
