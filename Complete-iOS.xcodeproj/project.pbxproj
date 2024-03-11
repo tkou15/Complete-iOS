@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		A566A6092B981A4700450AC5 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A566A6082B981A4700450AC5 /* NotificationService.swift */; };
 		A762DAD42B9CE1C100DB8CAE /* Logger+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A762DAD32B9CE1C100DB8CAE /* Logger+.swift */; };
+		A762DAD72B9D6BAA00DB8CAE /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = A762DAD62B9D6BAA00DB8CAE /* FirebaseMessaging */; };
+		A762DAD92B9D78CD00DB8CAE /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A762DAD82B9D78CD00DB8CAE /* String+.swift */; };
+		A762DADB2B9D7B5500DB8CAE /* Data+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A762DADA2B9D7B5500DB8CAE /* Data+.swift */; };
 		A7A54B512B8E592E006EFA56 /* Complete-iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A54B502B8E592E006EFA56 /* Complete-iOSApp.swift */; };
 		A7A54B532B8E592E006EFA56 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A54B522B8E592E006EFA56 /* ContentView.swift */; };
 		A7A54B572B8E592F006EFA56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7A54B562B8E592F006EFA56 /* Assets.xcassets */; };
@@ -47,6 +50,8 @@
 		A566A6082B981A4700450AC5 /* NotificationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		A762DAD32B9CE1C100DB8CAE /* Logger+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Logger+.swift"; sourceTree = "<group>"; };
 		A762DAD52B9D69E700DB8CAE /* Complete-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Complete-iOS.entitlements"; sourceTree = "<group>"; };
+		A762DAD82B9D78CD00DB8CAE /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		A762DADA2B9D7B5500DB8CAE /* Data+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+.swift"; sourceTree = "<group>"; };
 		A7A54B4D2B8E592E006EFA56 /* Complete-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Complete-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7A54B502B8E592E006EFA56 /* Complete-iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Complete-iOSApp.swift"; sourceTree = "<group>"; };
 		A7A54B522B8E592E006EFA56 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -72,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A762DAD72B9D6BAA00DB8CAE /* FirebaseMessaging in Frameworks */,
 				A7B3CD5B2B98C7490036B861 /* FirebaseAnalytics in Frameworks */,
 				A7B3CD552B98A36C0036B861 /* AppTrackingTransparency.framework in Frameworks */,
 				A7DA29772B9A0B010046E5CC /* AdSupport.framework in Frameworks */,
@@ -169,6 +175,8 @@
 			isa = PBXGroup;
 			children = (
 				A762DAD32B9CE1C100DB8CAE /* Logger+.swift */,
+				A762DAD82B9D78CD00DB8CAE /* String+.swift */,
+				A762DADA2B9D7B5500DB8CAE /* Data+.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -228,6 +236,7 @@
 			name = "Complete-iOS";
 			packageProductDependencies = (
 				A7B3CD5A2B98C7490036B861 /* FirebaseAnalytics */,
+				A762DAD62B9D6BAA00DB8CAE /* FirebaseMessaging */,
 			);
 			productName = "Complete-iOS";
 			productReference = A7A54B4D2B8E592E006EFA56 /* Complete-iOS.app */;
@@ -348,11 +357,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7B3CD4F2B9776760036B861 /* FirebaseAnalyticsService.swift in Sources */,
+				A762DAD92B9D78CD00DB8CAE /* String+.swift in Sources */,
 				A7B3CD452B962E420036B861 /* AppDelegate.swift in Sources */,
 				A7A54B532B8E592E006EFA56 /* ContentView.swift in Sources */,
 				A566A6092B981A4700450AC5 /* NotificationService.swift in Sources */,
 				A7B3CD522B9779970036B861 /* AppTrackingService.swift in Sources */,
 				A7DA29752B98D1FB0046E5CC /* Item.swift in Sources */,
+				A762DADB2B9D7B5500DB8CAE /* Data+.swift in Sources */,
 				A7A54B512B8E592E006EFA56 /* Complete-iOSApp.swift in Sources */,
 				A762DAD42B9CE1C100DB8CAE /* Logger+.swift in Sources */,
 			);
@@ -516,13 +527,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Complete-iOS/Complete-iOS.entitlements";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Complete-iOS/Preview Content\"";
-				DEVELOPMENT_TEAM = 85693DB6BF;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 85693DB6BF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Complete-iOS/Resources/Info.plist";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "ATTを有効にしますか？";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -535,6 +549,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ko1.Complete-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Complete-iOS Dev";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -547,13 +563,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Complete-iOS/Complete-iOS.entitlements";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Complete-iOS/Preview Content\"";
-				DEVELOPMENT_TEAM = 85693DB6BF;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 85693DB6BF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Complete-iOS/Resources/Info.plist";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "ATTを有効にしますか？";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -566,6 +585,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ko1.Complete-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Complete-iOS Dev";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -701,6 +722,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		A762DAD62B9D6BAA00DB8CAE /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A7B3CD592B98C7490036B861 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
 		A7B3CD5A2B98C7490036B861 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A7B3CD592B98C7490036B861 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

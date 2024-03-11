@@ -6,29 +6,53 @@
 //
 
 import Foundation
+import UIKit
 import UserNotifications
+import FirebaseMessaging
+import OSLog
 
 final class NotificationService: NSObject {
     static let shared = NotificationService()
         
+    override init() {
+        super.init()
+        // MessagingDelegateの指定
+        Messaging.messaging().delegate = self
+        // UNUserNotificationCenterDelegateの指定
+        UNUserNotificationCenter.current().delegate = self
+    }
+    
     func requestAuth() {
         let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
         UNUserNotificationCenter.current().requestAuthorization(options: authOptions) { authorized, error in
+            if let error = error {
+                logger.permission.error("\(error.localizedDescription)")
+            }
             if authorized {
                 logger.permission.info("Push notifications allowed.")
             } else {
                 logger.permission.warning("Push notifications not allowed.")
             }
-            if let error = error {
-                logger.permission.error("")
-            } else {
-                
-            }
+        }
+        UIApplication.shared.registerForRemoteNotifications()
+    }
+    
+    func registerFCMToken(_ deviceToken: Data?) {
+        if let deviceToken = deviceToken {
+            Messaging.messaging().apnsToken = deviceToken
         }
     }
 }
 
-// -- MARK: UNUserNotificationCenterDelegate
+// MARK: - Firebase Messaging
+extension NotificationService: MessagingDelegate {
+    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
+        guard let fcmToken = fcmToken else { return }
+        logger.default.debug("FCMToken: \(String(describing: fcmToken))")
+    }
+}
+
+// MARK: - UNUserNotificationCenterDelegate
 extension NotificationService: UNUserNotificationCenterDelegate {
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
