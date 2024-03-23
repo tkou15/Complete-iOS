@@ -14,6 +14,7 @@
 		A762DAD72B9D6BAA00DB8CAE /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = A762DAD62B9D6BAA00DB8CAE /* FirebaseMessaging */; };
 		A762DAD92B9D78CD00DB8CAE /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A762DAD82B9D78CD00DB8CAE /* String+.swift */; };
 		A762DADB2B9D7B5500DB8CAE /* Data+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A762DADA2B9D7B5500DB8CAE /* Data+.swift */; };
+		A77D97052BAEACEB00E7FBBC /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = A77D97042BAEACEB00E7FBBC /* FirebaseMessaging */; };
 		A7A54B512B8E592E006EFA56 /* Complete-iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A54B502B8E592E006EFA56 /* Complete-iOSApp.swift */; };
 		A7A54B532B8E592E006EFA56 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A54B522B8E592E006EFA56 /* ContentView.swift */; };
 		A7A54B572B8E592F006EFA56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7A54B562B8E592F006EFA56 /* Assets.xcassets */; };
@@ -103,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A77D97052BAEACEB00E7FBBC /* FirebaseMessaging in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +280,9 @@
 			dependencies = (
 			);
 			name = NotificationExtension;
+			packageProductDependencies = (
+				A77D97042BAEACEB00E7FBBC /* FirebaseMessaging */,
+			);
 			productName = NotificationExtension;
 			productReference = A53852F62BA844280037495D /* NotificationExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
@@ -494,7 +499,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 85693DB6BF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NotificationExtension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = NotificationExtension;
@@ -519,7 +524,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 85693DB6BF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NotificationExtension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = NotificationExtension;
@@ -871,6 +876,11 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		A762DAD62B9D6BAA00DB8CAE /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A7B3CD592B98C7490036B861 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		A77D97042BAEACEB00E7FBBC /* FirebaseMessaging */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A7B3CD592B98C7490036B861 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseMessaging;

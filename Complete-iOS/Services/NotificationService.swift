@@ -9,7 +9,6 @@ import Foundation
 import UIKit
 import UserNotifications
 import FirebaseMessaging
-import OSLog
 
 final class NotificationService: NSObject {
     static let shared = NotificationService()
