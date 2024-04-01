@@ -9,7 +9,7 @@ import Foundation
 import AppTrackingTransparency
 import AdSupport
 
-class AppTrackingService {
+final class AppTrackingService {
     
     static let shared = AppTrackingService()
     
@@ -23,9 +23,9 @@ class AppTrackingService {
                     switch status {
                     case .authorized:
                         let idfa = ASIdentifierManager.shared().advertisingIdentifier
-                        print(idfa.uuidString)
+                        logger.permission.info("Obtain IDFA: \(idfa)")
                     default:
-                        print("IDFA could not be obtained.")
+                        logger.permission.warning("IDFA could not be obtained.")
                     }
                 })
             }
