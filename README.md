@@ -2,9 +2,8 @@
 
 ## Supported Features
 
-
 ### Firebase
 
 - Firebase Analytics
 - Firebase Crashlytics
-- Firebase Cloud Messaging 
+- Firebase Cloud Messaging
