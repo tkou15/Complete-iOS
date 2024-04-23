@@ -28,7 +28,8 @@ struct Main: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
+                .preferredColorScheme(.dark)
         }
         .modelContainer(sharedModelContainer)
     }

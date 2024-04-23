@@ -12,13 +12,17 @@
 		A566A6092B981A4700450AC5 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A566A6082B981A4700450AC5 /* NotificationService.swift */; };
 		A75E7A0D2BC2A02A003736FC /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75E7A0C2BC2A02A003736FC /* Color+.swift */; };
 		A75E7A0F2BC2A64A003736FC /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A75E7A0E2BC2A64A003736FC /* Color.xcassets */; };
+		A75E7A162BD7F11E003736FC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75E7A152BD7F11E003736FC /* HomeView.swift */; };
+		A75E7A182BD7F12E003736FC /* ComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75E7A172BD7F12E003736FC /* ComponentView.swift */; };
+		A75E7A1A2BD7F13C003736FC /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75E7A192BD7F13C003736FC /* SettingView.swift */; };
+		A75E7A1D2BD7F213003736FC /* FeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75E7A1C2BD7F213003736FC /* FeatureView.swift */; };
 		A762DAD42B9CE1C100DB8CAE /* Logger+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A762DAD32B9CE1C100DB8CAE /* Logger+.swift */; };
 		A762DAD72B9D6BAA00DB8CAE /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = A762DAD62B9D6BAA00DB8CAE /* FirebaseMessaging */; };
 		A762DAD92B9D78CD00DB8CAE /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A762DAD82B9D78CD00DB8CAE /* String+.swift */; };
 		A762DADB2B9D7B5500DB8CAE /* Data+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A762DADA2B9D7B5500DB8CAE /* Data+.swift */; };
 		A77D97052BAEACEB00E7FBBC /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = A77D97042BAEACEB00E7FBBC /* FirebaseMessaging */; };
 		A7A54B512B8E592E006EFA56 /* Complete-iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A54B502B8E592E006EFA56 /* Complete-iOSApp.swift */; };
-		A7A54B532B8E592E006EFA56 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A54B522B8E592E006EFA56 /* ContentView.swift */; };
+		A7A54B532B8E592E006EFA56 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A54B522B8E592E006EFA56 /* RootView.swift */; };
 		A7A54B572B8E592F006EFA56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7A54B562B8E592F006EFA56 /* Assets.xcassets */; };
 		A7A54B5A2B8E592F006EFA56 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7A54B592B8E592F006EFA56 /* Preview Assets.xcassets */; };
 		A7A54B642B8E592F006EFA56 /* Complete-iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A54B632B8E592F006EFA56 /* Complete-iOSTests.swift */; };
@@ -80,13 +84,17 @@
 		A566A6082B981A4700450AC5 /* NotificationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		A75E7A0C2BC2A02A003736FC /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
 		A75E7A0E2BC2A64A003736FC /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
+		A75E7A152BD7F11E003736FC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		A75E7A172BD7F12E003736FC /* ComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentView.swift; sourceTree = "<group>"; };
+		A75E7A192BD7F13C003736FC /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		A75E7A1C2BD7F213003736FC /* FeatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureView.swift; sourceTree = "<group>"; };
 		A762DAD32B9CE1C100DB8CAE /* Logger+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Logger+.swift"; sourceTree = "<group>"; };
 		A762DAD52B9D69E700DB8CAE /* Complete-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Complete-iOS.entitlements"; sourceTree = "<group>"; };
 		A762DAD82B9D78CD00DB8CAE /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		A762DADA2B9D7B5500DB8CAE /* Data+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+.swift"; sourceTree = "<group>"; };
 		A7A54B4D2B8E592E006EFA56 /* Complete-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Complete-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7A54B502B8E592E006EFA56 /* Complete-iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Complete-iOSApp.swift"; sourceTree = "<group>"; };
-		A7A54B522B8E592E006EFA56 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A7A54B522B8E592E006EFA56 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		A7A54B562B8E592F006EFA56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A7A54B592B8E592F006EFA56 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A7A54B5F2B8E592F006EFA56 /* Complete-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Complete-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,6 +159,50 @@
 			path = NotificationExtension;
 			sourceTree = "<group>";
 		};
+		A75E7A102BD7F0D2003736FC /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				A7A54B522B8E592E006EFA56 /* RootView.swift */,
+				A75E7A122BD7F0EC003736FC /* Home */,
+				A75E7A1B2BD7F201003736FC /* Feature */,
+				A75E7A132BD7F0F4003736FC /* Components */,
+				A75E7A142BD7F108003736FC /* Settings */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		A75E7A122BD7F0EC003736FC /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A75E7A152BD7F11E003736FC /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A75E7A132BD7F0F4003736FC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A75E7A172BD7F12E003736FC /* ComponentView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		A75E7A142BD7F108003736FC /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				A75E7A192BD7F13C003736FC /* SettingView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		A75E7A1B2BD7F201003736FC /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				A75E7A1C2BD7F213003736FC /* FeatureView.swift */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
 		A762DAD22B9CE1A900DB8CAE /* Util */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,7 +239,7 @@
 				A762DAD52B9D69E700DB8CAE /* Complete-iOS.entitlements */,
 				A7B3CD442B962E420036B861 /* AppDelegate.swift */,
 				A7A54B502B8E592E006EFA56 /* Complete-iOSApp.swift */,
-				A7A54B522B8E592E006EFA56 /* ContentView.swift */,
+				A75E7A102BD7F0D2003736FC /* UI */,
 				A7DA29732B98D1FB0046E5CC /* Model */,
 				A7B3CD502B97767C0036B861 /* Services */,
 				A7B3CD462B962E880036B861 /* Extentions */,
@@ -483,12 +535,16 @@
 				A7B3CD4F2B9776760036B861 /* FirebaseAnalyticsService.swift in Sources */,
 				A762DAD92B9D78CD00DB8CAE /* String+.swift in Sources */,
 				A7B3CD452B962E420036B861 /* AppDelegate.swift in Sources */,
-				A7A54B532B8E592E006EFA56 /* ContentView.swift in Sources */,
+				A7A54B532B8E592E006EFA56 /* RootView.swift in Sources */,
 				A566A6092B981A4700450AC5 /* NotificationService.swift in Sources */,
 				A7B3CD522B9779970036B861 /* AppTrackingService.swift in Sources */,
+				A75E7A1D2BD7F213003736FC /* FeatureView.swift in Sources */,
 				A7DA29752B98D1FB0046E5CC /* Item.swift in Sources */,
+				A75E7A1A2BD7F13C003736FC /* SettingView.swift in Sources */,
 				A762DADB2B9D7B5500DB8CAE /* Data+.swift in Sources */,
+				A75E7A182BD7F12E003736FC /* ComponentView.swift in Sources */,
 				A75E7A0D2BC2A02A003736FC /* Color+.swift in Sources */,
+				A75E7A162BD7F11E003736FC /* HomeView.swift in Sources */,
 				A7A54B512B8E592E006EFA56 /* Complete-iOSApp.swift in Sources */,
 				A762DAD42B9CE1C100DB8CAE /* Logger+.swift in Sources */,
 			);
